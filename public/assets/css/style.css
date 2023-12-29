@@ -565,14 +565,14 @@ nav.navbar.bootsnav .navbar-toggle i{color: #4e4ffa;}
 }
 .footer-contact p {
     margin: 0;
-    color: #d1d7e9;
+    color: #787b84;
 }
 /*.footer-logo*/
 
 .single-footer-widget {margin-bottom: 40px;}
 .single-footer-widget h2 {
     font-size: 14px;
-    color: #fff;
+    color: #787b84;
     text-transform: uppercase;
     margin-bottom: 43px;
 }
@@ -593,13 +593,13 @@ nav.navbar.bootsnav .navbar-toggle i{color: #4e4ffa;}
 }
 .single-footer-widget ul li a {
     font-size:  14px;
-    color:  #cfd0e3;
+    color:  #787b84;
     font-weight:  300;
     padding-bottom: 13px;
 }
 .single-footer-widget ul li a span {text-transform: lowercase;}
 .footer-newsletter p{
-    color: #aeafc2;
+    color: #787b84;
     font-size: 14px;
     font-weight: 300;
     margin: 0 0 15px;
