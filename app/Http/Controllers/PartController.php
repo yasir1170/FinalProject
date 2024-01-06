@@ -66,17 +66,17 @@ class PartController extends Controller
         $product = Part::findOrFail($id);
     
         // Check if there is enough stock
-        if ($product->stock_qty <= 0) {
-            return redirect()->back()->with('error', 'Sorry, this item is out of stock.');
-        }
+        // if ($product->stock_qty <= 0) {
+        //     return redirect()->back()->with('error', 'Sorry, this item is out of stock.');
+        // }
     
         $cart = session()->get('cart', []);
     
         if (isset($cart[$id])) {
             // Check if there is enough stock for the additional quantity
-            if ($product->stock_qty <= 0 || $cart[$id]['quantity'] + 1 > $product->stock_qty) {
-                return redirect()->back()->with('error', 'Sorry, there is not enough stock for this item.');
-            }
+            // if ($product->stock_qty <= 0 || $cart[$id]['quantity'] + 1 > $product->stock_qty) {
+            //     return redirect()->back()->with('error', 'Sorry, there is not enough stock for this item.');
+            // }
     
             $cart[$id]['quantity']++;
         } else {
@@ -104,13 +104,13 @@ class PartController extends Controller
             $product = Part::findOrFail($request->id);
 
             // Calculate the difference in quantity
-            $quantityDifference = $request->quantity - $oldQuantity;
+            // $quantityDifference = $request->quantity - $oldQuantity;
 
             // Check if there is enough stock for the new quantity
-            if ($quantityDifference > 0 && $product->stock_qty < $quantityDifference) {
-                session()->flash('success', 'Sorry, there is not enough stock for this item.');
+            // if ($quantityDifference > 0 && $product->stock_qty < $quantityDifference) {
+            //     session()->flash('success', 'Sorry, there is not enough stock for this item.');
                 // return redirect()->back()->with('error', 'Sorry, there is not enough stock for this item.');
-            }
+            // }
 
             // Update the cart quantity
             $cart[$request->id]["quantity"] = $request->quantity;

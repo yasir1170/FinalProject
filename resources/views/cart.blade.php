@@ -26,7 +26,7 @@
                             </div>
                         </div>
                     </td>
-                    <td data-th="Price">${{ $details['price'] }}</td>
+                    <td data-th="Price">Rs{{ $details['price'] }}</td>
                     <td data-th="Quantity">
                         <input type="number" value="{{ $details['quantity'] }}" class="form-control quantity cart_update" min="1" />
                     </td>
@@ -46,7 +46,7 @@
         <tr>
             <td colspan="5" class="text-right">
                 <a href="{{ url('toyota/corolla') }}" class="btn btn-danger"> <i class="fa fa-arrow-left"></i> Continue Shopping</a>
-                
+
                 <form method="post" action="{{ route('checkout') }}">
                     @csrf
                     <button class="btn btn-success" type="submit">  <i class="fa fa-money"></i>Checkout</button>
