@@ -35,7 +35,6 @@
                         <button class="btn btn-danger btn-sm cart_remove"><i class="fa fa-trash-o"></i> Delete</button>
                         
                     </td>
-                    <td><div class="new">My name is Muhammad Yasir</div></td>
                 </tr>
             @endforeach
         @endif
